@@ -54,8 +54,9 @@ body {
     left: 0;
     margin-top: 60px;
     transform: translateX(-250px);
-    transition: transform 250ms ease-in-out;
     background: linear-gradient(180deg , #FC466B 0%, #3f5efb 100%);
+    visibility: hidden;
+    transition: transform 250ms ease-in-out, visibility 0s 250ms;
 }
 
 .sidebarmenuinner {
@@ -74,7 +75,7 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
-.sidebarmenuinner h3 span {
+#sidebarmenu h3 span {
     display: block;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.50);
@@ -94,12 +95,20 @@ body {
 
 input[type="checkbox"]:checked ~ #sidebarmenu {
     transform: translateX(0);
+    visibility: visible;
+    transition: transform 250ms ease-in-out, visibility 0s;
 }
 
 input[type=checkbox] {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+input[type=checkbox]:focus-visible ~ .sidebarIconToggle {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
 }
 
 .sidebarIconToggle {

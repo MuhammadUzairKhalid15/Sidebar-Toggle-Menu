@@ -13,6 +13,7 @@ A slide-out sidebar menu built with HTML & CSS only. A hidden checkbox controls 
 - ✨ Hover effect on menu items
 - 🔗 Menu items: Portfolio, Social Media, Contact Me
 - 🚫 No JavaScript used
+- ⌨️ Keyboard accessible: Tab to the icon, press Space to open, hidden links stay out of the tab order while closed
 
 ## 🔧 Built With
 
@@ -34,7 +35,7 @@ Sidebar-Toggle-Menu/
    ```
    git clone https://github.com/MuhammadUzairKhalid15/Sidebar-Toggle-Menu.git
    ```
-2. Open `index.html` in your browser, then click the icon in the header to open the sidebar.
+2. Open `index.html` in your browser, then click the icon (or press Tab to focus it and Space to toggle) to open the sidebar.
 
 ## 💡 What I Practiced
 
@@ -43,6 +44,7 @@ Sidebar-Toggle-Menu/
 - Using `transform: translateX()` instead of `left` for smoother, GPU-accelerated slides
 - Turning three bars into an X with `rotate()`, `opacity` and transitions
 - Gradient backgrounds with `linear-gradient`
+- Keyboard accessibility using `visibility`, a visually hidden checkbox and `:focus-visible`
 
 ## 📬 Feedback
 
